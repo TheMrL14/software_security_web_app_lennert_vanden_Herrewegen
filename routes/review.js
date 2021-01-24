@@ -12,6 +12,19 @@ const router = app.Router();
 const dao = new Dao();
 const uDao = new userDao();
 
+const corsoptions = {
+  methods: "GET,HEAD,OPTIONS,POST",
+};
+
+router.use(cors(corsoptions));
+
+const corsoptionsId = {
+  methods: "GET,PUT,OPTIONS,HEAD",
+};
+
+router.use(cors(corsoptions));
+router.use("/:id", cors(corsoptions));
+
 //OPTIONS
 router.options("/", (req, res, next) => res.sendStatus(200));
 
