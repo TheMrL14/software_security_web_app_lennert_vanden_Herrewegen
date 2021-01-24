@@ -97,10 +97,12 @@ router.get("/:id", (req, res) => {
 
 //PUT
 router.put("/:id", Auth.checkJwt, (req, res) => {
+  const id = req.params.id;
   let review = {
     title: req.body.title,
     review: req.body.review,
     score: req.body.score,
+    userId: req.body.userId,
   };
 
   // DELETE undefined objects from updated review

@@ -31,8 +31,8 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(helmet());
 
 const corsOptions = {
-  //origin: "http://localhost:9000",
-  origin: "https://www.lennertvh.xyz",
+  origin: "http://localhost:9000",
+  //origin: "https://www.lennertvh.xyz",
   allowedHeaders: "",
   exposedHeaders: ["Content-Type", "application/json"],
 };
