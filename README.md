@@ -8,6 +8,10 @@ online link = https://bmc.lennertvh.xyz/
 
 (public api by using api key)
 
+path /api
+(get api key)
+GET
+
 path /api/reviews?apikey=XXXXXXXX
 GET
 
