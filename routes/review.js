@@ -127,7 +127,7 @@ router.put("/:id", Auth.checkJwt, (req, res) => {
 });
 //DELETE
 router.delete("/:id", Auth.checkJwt, (req, res) => {
-  dao.deletereview(req.params.id, (err, data) => {
+  dao.deleteReview(req.params.id, (err, data) => {
     if (err) throw err;
     if (data.affectedRows == 0) {
       res.sendStatus(404);

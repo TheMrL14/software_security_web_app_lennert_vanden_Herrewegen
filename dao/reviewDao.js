@@ -39,7 +39,7 @@ module.exports = class MovieDao {
     this.db.executePostQuery(sql, post, callback);
   };
 
-  deleteMovie = (id, callback) => {
+  deleteReview = (id, callback) => {
     const sql = "DELETE FROM " + dbPath + " WHERE id = ?";
     this.db.executeQueryWithParams(sql, id, callback);
   };
