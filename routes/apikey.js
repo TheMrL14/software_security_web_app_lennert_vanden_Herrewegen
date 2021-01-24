@@ -37,6 +37,7 @@ router.get("/", cors(publicCorsOpitions), (req, res, next) => {
   const token = jwt.compact();
   console.log(Auth.checkAPIjwt(token));
   console.log(Auth.checkAPIjwt("abcdef"));
+  res.send(200, token);
 });
 
 router.get("/reviews", (req, res, next) => {
